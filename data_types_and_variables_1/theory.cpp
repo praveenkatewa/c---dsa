@@ -79,45 +79,7 @@
 // what is object?
 // is the container which stores non-primitive type of information.
 // =====================================================================================
-//programming is problem solving
-//using function startegy
-// because it will increase the code readability
-//it will seggregate the code into mutiple functions
-//we can re-use the code whenever needed
 
-//problem ==input ouput processing(excution)
-
-#include<bits/stdc++.h>
-using namespace std;
-
-int main()
-{
-    int a,b,sum;
-    cout<<"Enter the value of a and b\n";
-    cin>>a>>b;
-    sum=a+b;
-    cout<<"Sum of "<<a<<" and "<<b<<" is "<<sum;
-    return 0;
-}
-
-
-#include<bits/stdc++.h>
-using namespace std;
-
-void summation()
-{
-    int a,b,sum;
-    cout<<"Enter the value of a and b\n";
-    cin>>a>>b;
-    sum=a+b;
-    cout<<"Sum of "<<a<<" and "<<b<<" is "<<sum;
-}
-
-int main()
-{
-    summation();
-    return 0;
-}
 
 
 //===================================================================================
