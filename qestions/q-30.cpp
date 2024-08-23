@@ -4,8 +4,7 @@ call a function that counts the number of months with expenses above $400.
 If the sum is less than $5000, call a function that finds the first occurrence of a month with expenses below $200.
 If the sum is exactly $5000, call a function that calculates the total number of months with expenses ending in zero.*/
 
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 using namespace std;
 
 // Function to count the number of months with expenses above $400

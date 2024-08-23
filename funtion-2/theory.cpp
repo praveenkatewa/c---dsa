@@ -129,7 +129,7 @@ int main()
 
 
 
-
+/*
  #include <iostream>
 using namespace std;
 bool prime(int n)
@@ -169,8 +169,148 @@ int main(){
      cout<<prime(b-a)<<endl;
      
      cout<<fact(b-a)<<endl;
-    
-    
+}
+*/
 
+
+
+
+
+/* funtion use with void
+
+void prime(int n)
+{
+    if(n<2)
+    {
+        cout<<0<<endl;
     
+    return ;
+    }
+
+
+    for(int i=2;i<n;i++){
+        if(n%i==0)
+        {
+            cout<<0<<endl;
+            return;
+        }
+    }
+    cout<<1<<endl;
+    return;
+}
+*/
+
+
+//  swap of two number 
+
+/*
+#include <iostream>
+using namespace std;
+
+ void swap(int &a,int &b){
+    int c;
+    c=a;
+    a=b;
+    b=c;
+    
+}
+
+int main()
+{
+    int a,b;
+    
+    cin>>a>>b;
+    swap(a,b);
+    cout<<a<<b;
+   
+
+    return 0;
+}
+*/
+
+
+
+//  function overloading here
+// same function name are there but parameter are different datatype
+/*
+#include <iostream>
+using namespace std;
+
+ void swap(int &a,int &b){
+    int c;
+    c=a;
+    a=b;
+    b=c;
+    
+}
+
+ void swap(float &c,float &d){
+float r=c;
+    c=d;
+    d=r;
+    
+}
+
+int main()
+{
+    int a,b;
+    
+    cin>>a>>b;
+    swap(a,b);
+    cout<<a<<b<<endl;
+    
+    float f1=4.5,f2=3.4;
+    swap(f1,f2);
+    cout<<f1<<f2;
+   
+
+    return 0;
+}
+
+
+*/
+
+
+
+
+//  inbuild funtion of swap in c++
+/*
+#include <iostream>
+using namespace std;
+
+ 
+
+int main()
+{
+    int a,b;
+    
+    cin>>a>>b;
+    swap(a,b);
+    cout<<a<<b<<endl;
+    
+    float f1=4.5,f2=3.4;
+    swap(f1,f2);
+    cout<<f1<<f2;
+   
+
+    return 0;
+}
+*/
+
+
+
+#include<iostream>
+using namespace std;
+void sayHello(){
+    cout <<"hello"<<endl;
+
+}
+void assistant(){
+    sayHello();
+    cout <<"work done"<<endl;
+
+}
+int main(){
+    assistant();
+    return 0;
 }
