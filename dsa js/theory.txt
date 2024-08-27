@@ -1,0 +1,104 @@
+Data structures are used to organize and store information to be easily accessed and manipulated. 
+For example, 
+when you use Google Maps, data structures store information about the roads, landmarks, and other points of interest in your area.
+
+Algorithms, on the other hand, are a set of instructions that tell a computer how to solve a particular problem. 
+In the case of Google Maps, algorithms are used to calculate the fastest route between two points by analyzing the data stored in its data structures.
+
+
+Classification of Data structure
+
+-> into two categories:
+1>Primitive Data Structures: 
+in JavaScript, primitive data types are basic data types that are not objects and do not have any methods or properties.
+ They are immutable, meaning their values cannot be changed once they are created.
+
+1>Numbers: Represents numeric values.
+const age = 30;
+const pi = 3.14;
+
+2>Strings: Represents sequences of characters.
+const name = "John Doe";
+const message = "Hello, world!";
+
+3>Booleans: Represents true or false values.
+const isTrue = true;
+const isFalse = false;
+
+4>Null: Represents the intentional absence of any object value.
+const person = null;
+
+5> Undefined: Represents a declared variable without a value assigned.
+let variableWithoutValue;
+
+6>Symbols: Represents unique and immutable values used as object properties
+const id = Symbol("unique_id");
+
+
+
+2> Non-primitive Data Structures:
+In JavaScript, non-primitive data types are data structures that can hold multiple values and have methods and properties associated with them. 
+These data structures are implemented as objects in JavaScript.
+
+
+ 1>Array: An ordered list of values, often of the same type, accessed by their index.
+  Arrays in JavaScript are mutable and have methods for manipulating and accessing elements.
+
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers.length);
+console.log(numbers[2]);
+
+// Output
+5
+3
+
+
+2>Object: A collection of key-value pairs where the values can be of any data type, including other objects. 
+Objects in JavaScript are mutable and can have properties and methods.
+
+const person = {
+  name: 'John Doe',
+  age: 30,
+  email: 'john.doe@example.com',
+  address: {
+    city: 'New York',
+    country: 'USA'
+  }
+};
+console.log(person.name);
+console.log(person.address.city);
+
+// Output
+'John Doe'
+'New York'
+
+
+3> Map: A collection of key-value pairs where the keys can be of any data type.
+ Maps in JavaScript provide an efficient way to store and retrieve data based on keys and have methods for working with the key-value pairs.
+
+ let map = new Map();
+map.set('key1', 'value1');
+map.set('key2', 'value2');
+console.log(map.get('key1'));
+
+// Output
+value1
+
+
+
+4> Set: A collection of unique values where each value can only occur once. Sets in JavaScript provide methods for adding, removing, and checking the presence of elements.
+
+const uniqueNumbers = new Set([1, 2, 3, 2, 4, 5, 1]);
+console.log(uniqueNumbers);
+
+// Output
+Set(5) { 1, 2, 3, 4, 5 }
+
+
+5>Linked List: A linked list is a data structure where elements, known as nodes, are connected via pointers or references. Each node contains data and a reference to the next node.
+
+
+6> Tree: Trees are a non-linear data structure, meaning they do not have a sequential arrangement of elements. Unlike linear data structures such as arrays, linked lists, and stacks, trees allow for a parent-child relationship between elements. In trees, each node can have zero or more child nodes, and each child node can have its own child nodes.
+
+
+7>Graph: A graph data structure is a collection of nodes (vertices) and edges that connect them. Graphs are used to represent complex relationships between objects or entities. They are widely used in computer science, including in data structures and algorithms, computer networking, and database management.
