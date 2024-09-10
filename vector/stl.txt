@@ -1,0 +1,37 @@
+// In C++, a vector is a dynamic array provided ==> size grow and shrink
+// by the Standard Template Library (STL).
+// Unlike arrays, vectors can resize themselves
+// run time memory allocate == Dynamic memory allocation
+// run time polymorphism
+// complie time == initially memory jo allocate hogi
+// during program execution the memory allocated by the program is called as runtime
+// array =  static memory allocation once it is created it cannot be changed
+// poly = more than one having same name but with different functionality
+// bank = river bank and other one is money bank, blood bank
+// area = triangle , sqaure
+// marriage how many people will going to come?
+
+// what is array?
+// a data structure which is non primitive, which is linear, which is contiguous,
+// which hold same data types in linear fashion is called as array, which is having
+// concept of complie time polymorphism and once created cannot be modified.
+
+//what is Vectors?
+// a data structure which is non primitive, which is linear, which is contiguous,
+// which hold same data types in linear fashion having the concept of runtime polymorphism
+// which can able to grow and shrink Dynamically
+
+//what is linear datastructure?
+// a linear datastructure is a non primitive datastructure which is having the difference
+// between two memory location is always fixed and depends on the size of one datastructure
+
+// what is homogenous datastructure?
+// where we are grouping the similar datastructure inside one entity
+
+// automatically when elements are added or removed, making them more flexible.
+
+// Key Features of Vectors:
+// Dynamic Size: Vectors can grow or shrink as needed.
+// Random Access: Elements can be accessed directly using indices.
+// Efficient Insertion/Deletion: Insertion and deletion at
+// the end of the vector is efficient (amortized O(1)).

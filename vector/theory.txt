@@ -1,0 +1,226 @@
+In C++, a vector is a dynamic array provided by the Standard Template Library (STL).
+ Unlike arrays, vectors can resize themselves automatically when elements are added or removed, making them more flexible.
+
+Key Features of Vectors:
+Dynamic Size: Vectors can grow or shrink as needed.
+Random Access: Elements can be accessed directly using indices.
+Efficient Insertion/Deletion: Insertion and deletion at the end of the vector is efficient (amortized O(1)).
+
+Common Vector Functions:
+Initialization:
+vector<int> myVector;  // A vector of integers
+vector<int> myVector;                  // Empty vector
+vector<int> myVector(10);              // Vector with 10 elements, all initialized to 0
+vector<int> myVector(10, 5);           // Vector with 10 elements, all initialized to 5
+vector<int> myVector{1, 2, 3, 4, 5};   // Vector initialized with values
+
+Common Vector Functions
+push_back(): Adds an element to the end of the vector.
+myVector.push_back(10);  // Adds 10 to the end of the vector
+
+pop_back(): Removes the last element from the vector.
+myVector.pop_back();  // Removes the last element
+
+size(): Returns the number of elements in the vector.
+int size = myVector.size();  // Gets the size of the vector
+
+capacity(): Returns the number of elements that the vector can hold before needing to allocate more memory.
+int capacity = myVector.capacity();  // Gets the capacity of the vector
+
+empty(): Checks if the vector is empty.
+bool isEmpty = myVector.empty();  // Returns true if the vector is empty
+
+resize(): Changes the size of the vector. If the new size is greater than the current size, new elements are initialized with a default value.
+myVector.resize(20);  // Resizes the vector to contain 20 elements
+v.resize(5);                       // Resize to hold 5 elements
+v.resize(8, 10);                   // Resize to hold 8 elements, new ones initialized to 10
+
+
+clear(): Removes all elements from the vector, making it empt
+myVector.clear();  // Clears all elements from the vector
+
+insert(): Inserts an element at a specific position.
+myVector.insert(myVector.begin() + 2, 15);  // Inserts 15 at the third position
+v.insert(v.begin() + 1, 100);      // Insert 100 at position 1
+v.insert(v.end(), 5, 20);          // Insert five 20s at the end
+
+erase(): Removes an element from a specific position or a range of elements.
+myVector.erase(myVector.begin() + 2);  // Removes the element at the third position
+v.erase(v.begin() + 2);            // Erase element at index 2
+v.erase(v.begin() + 1, v.begin() + 3); // Erase elements from index 1 to 2
+
+other useful functions
+v.clear();                         // Remove all elements
+bool isEmpty = v.empty();          // Check if vector is empty
+
+front(): Returns a reference to the first element.
+
+v.front();                         // Get the first element
+int firstElement = myVector.front();  // Gets the first element
+
+back(): Returns a reference to the last element.
+v.back();                          // Get the last element
+int lastElement = myVector.back();  // Gets the last element
+
+at(): Returns a reference to the element at a specific position, with bounds checking.
+int element = myVector.at(2);  // Gets the element at the third position
+
+swap(): Exchanges the contents of two vectors.
+vector<int> anotherVector{5, 6, 7};
+myVector.swap(anotherVector);  // Swaps the contents of myVector and anotherVector
+
+assign(): Assigns new values to the vector, replacing its current contents.
+myVector.assign(7, 100);  // Assigns 7 elements with the value 100
+
+emplace_back(): Constructs and adds an element to the end of the vector. It's more efficient than push_back() for non-primitive data types.
+myVector.emplace_back(20);  // Adds 20 to the end of the vector
+
+
+v.shrink_to_fit();                 // Reduce capacity to size
+
+
+example1
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    // Create a vector and add elements
+    vector<int> numbers;
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    // Access and modify elements
+    cout << "Element at index 1: " << numbers.at(1) << endl;
+    numbers[1] = 25;
+
+    // Insert and erase
+    numbers.insert(numbers.begin() + 1, 15);
+    numbers.erase(numbers.begin() + 2);
+
+    // Iterate over the vector
+    cout << "Current elements: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    // Size and capacity
+    cout << "Size: " << numbers.size() << endl;
+    cout << "Capacity: " << numbers.capacity() << endl;
+
+    return 0;
+}
+
+
+example2
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    vector<int> numbers;
+
+    // Adding elements to the vector
+    numbers.push_back(1);
+    numbers.push_back(2);
+    numbers.push_back(3);
+
+    // Displaying the elements of the vector
+    cout << "Vector elements: ";
+    for (int i = 0; i < numbers.size(); i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
+    // Using other vector functions
+    numbers.pop_back();  // Removes the last element
+
+    cout << "Size of vector: " << numbers.size() << endl;
+    cout << "Capacity of vector: " << numbers.capacity() << endl;
+
+    numbers.insert(numbers.begin() + 1, 10);  // Insert 10 at the second position
+
+    cout << "Vector elements after insertion: ";
+    for (int num : numbers) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+classroom example:
+#include<bits/stdc++.h>
+using namespace std;
+void printarr(vector<int>&arr)
+{
+    for(auto it:arr)
+    {
+        cout<<it<<" ";
+    }
+    cout<<"\n";
+}
+int fact(int n)
+{
+    int f=1;
+    for(int i=1;i<=n;i++)
+    {
+        f*=i;
+    }
+    return f;
+}
+int main()
+{
+    vector<int>arr={1,2,3,4,5};
+    // vector<int>factorial;
+    // while(!arr.empty())
+    // {
+    //     factorial.push_back(fact(arr[arr.size()-1]));
+    //     arr.pop_back();
+    // }
+    // while(!factorial.empty())
+    // {
+    //     cout<<factorial[factorial.size()-1]<<" ";
+    //     factorial.pop_back();
+    // }
+    // // cout<<sum;
+    // cout<<" "<<arr.size()<<" "<<factorial.size();
+    // cout<<"\n";
+   
+    // // 10 elements
+    // int n;
+    // for(int i=0;i<10;i++)
+    // {
+    //     cin>>n;
+    //     arr.push_back(n);
+    // }
+    // printarr(arr);
+   
+    // arr.resize(10);
+    // printarr(arr);
+    // // cout<<arr.size();
+    // arr.clear();
+    // arr.insert(arr.begin()+2,100);
+    // printarr(arr);
+    // // arr.insert(arr.begin()+10,100);
+    // // printarr(arr);
+    // arr.insert(arr.end(),5,200);
+    // printarr(arr);
+    // cout<<arr.size()<<"\n";
+    // arr.erase(arr.begin()+3,arr.begin()+7);
+    // printarr(arr);
+    // // arr.insert(arr.begin()+2,arr.begin()+5,500);
+    // // printarr(arr);
+    // cout<<arr.front()<<" "<<arr.back();
+    vector<int>arr1={1,2,3};
+    vector<int>arr2={4,5,6};
+    arr1.swap(arr2);
+    printarr(arr1);
+    printarr(arr2);
+    arr2.assign(7,100);
+    printarr(arr2);
+   
+}

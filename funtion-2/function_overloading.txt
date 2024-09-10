@@ -1,0 +1,88 @@
+// function overloading
+
+
+// same same but different
+// twins(same)=different
+// more than one function with same name but different functionality
+
+
+//runtime mai decide kiya ja rha hai ki konsa function exceute hona wala hai
+// runtime poly morphism
+
+
+// complie time vs runtime
+// complie time phele se decide hota
+
+// runtime mai decision during exceution ho raha hota hai
+
+// parameter on which you decide which function to be executed
+// no of arguments
+// arguments ===> input
+// 1 arguments
+// 2 arguments
+// 3 arguments
+
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void display(int a)
+{
+    cout<<"Mai ek argument wala display hoon "<<a<<"\n";
+}
+
+void display(int a,int b)
+{
+    cout<<"Mai do argument wala display hoon "<<a<<" "<<b<<"\n";
+}
+
+
+void display(int a,int b,int c)
+{
+    cout<<"Mai 3 argument wala display hoon "<<a<<" "<<b<<" "<<c<<"\n";
+}
+
+int main()
+{
+    display(10);
+    display(10,20);
+    display(10,20,30);
+}
+
+
+
+// procedural programming langage doesnot allow polymorphism concept
+//matlab procedural programming is bat ko allow nhi karti hai ki ek function ka do name hon
+// kyuki procedural programming compile time par based hoti hai
+// yeh runtime par decide nahi kar pati ki konsa kab chalana hai
+
+// due digilience nahi hai => can not able to analyse what to do at what instance.
+
+
+
+
+
+//  function abstract
+
+#include<bits/stdc++.h>
+using namespace std;
+//function prototype = function abstract
+// before defining a function the function structure or blueprint is called as function prototype
+int area(int ,int);
+float area(int);
+
+int main()
+{
+    cout<<area(10,20)<<"\n";//calculate karta hai area of rectangle
+    cout<<area(4)<<"\n";//area of cirlce
+}
+int area(int a,int b)
+{
+    return a*b;
+}
+float area(int a)
+{
+    return 3.14*a*a;
+}
