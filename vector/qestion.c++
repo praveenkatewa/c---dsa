@@ -1,3 +1,138 @@
+
+// 1 here one vector array ,,first add 10 on it then remove .and print
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+void printarr(vector<int>&arr)
+{
+    for(auto it:arr){
+        cout<<it<<" ";
+    }
+    cout<<"\n";
+}
+int main (){
+    vector<int>arr={1,2,3,4,5};
+    arr.push_back(10);
+    printarr(arr);
+    arr.pop_back();
+    printarr(arr);
+}
+
+*/
+
+// 2 ) to check size and capacity of vector
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+void printarr(vector<int>&arr)
+{
+    for(auto it:arr){
+        cout<<it<<" ";
+    }
+    cout<<"\n";
+}
+int main (){
+    vector<int>arr={1,2,3,4,5};
+    int s=arr.size();
+    
+    arr.push_back(10);
+    arr.push_back(10);
+    arr.push_back(10);
+    arr.push_back(10);
+    arr.push_back(10);
+    arr.push_back(10);
+    cout<<s<<" ";
+    int c =arr.capacity();
+    cout<<c<<" ";
+    
+}
+*/
+
+// 3) reverse array by use empty() or remove last element
+
+
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main (){
+    vector<int>arr={1,2,3,4,5};
+    while(!arr.empty()){
+        cout<<arr[arr.size()-1]<<" ";
+        arr.pop_back();
+    }
+    
+}
+
+*/
+
+// 4) sum of array
+
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main (){
+    vector<int>arr={1,2,3,4,5};
+    int sum=0;
+    while(!arr.empty()){
+        sum+=arr[arr.size()-1];
+        arr.pop_back();
+    }
+    cout<<sum;
+    
+}
+*/
+
+// 5) factorial of array elements
+
+/*
+#include<bits/stdc++.h>
+using namespace std;
+
+void printarr(vector <int>&arr){
+    for(auto it:arr){
+         cout<<it<<" "; 
+    }
+    cout<<"\n";
+}
+
+ int fact(int n){
+     int f=1;
+     for(int i=1;i<=n;i++){
+         f*=i;
+     }
+     return f;
+ }
+
+
+int main (){
+    vector<int>arr={1,2,3,4,5};
+    vector<int>factorial;
+    
+    while(!arr.empty()){
+        factorial.push_back(fact(arr[arr.size()-1]));
+        arr.pop_back();
+    }
+    while(!factorial.empty()){
+        cout<<factorial[factorial.size()-1]<< " ";
+        factorial.pop_back();
+    }
+}
+*/
+
+// 6)
+/*
+
+
+*/
+
+
+/*
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -34,12 +169,11 @@ int main()
     }
    
 }
+*/
 
+// 2
 
-
-
-
-
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void printarr(vector<int>&arr)
@@ -61,19 +195,9 @@ int main()
     numbers.shrink_to_fit();
     cout<<numbers.capacity();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
+// 3
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void printarr(vector<int>&arr)
@@ -98,13 +222,9 @@ int main()
         cout<<"Not found";
     }
 }
-
-
-
-
-
-
-
+*/
+// 4
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void printarr(vector<int>&arr)
@@ -139,3 +259,8 @@ int main()
         cout<<arr[i][0]<<"\n";
     }
 }
+
+*/
+
+
+

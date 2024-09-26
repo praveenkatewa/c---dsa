@@ -15,12 +15,13 @@ vector<int> myVector(10, 5);           // Vector with 10 elements, all initializ
 vector<int> myVector{1, 2, 3, 4, 5};   // Vector initialized with values
 
 Common Vector Functions
+ 
 push_back(): Adds an element to the end of the vector.
 myVector.push_back(10);  // Adds 10 to the end of the vector
 
 pop_back(): Removes the last element from the vector.
 myVector.pop_back();  // Removes the last element
-
+  
 size(): Returns the number of elements in the vector.
 int size = myVector.size();  // Gets the size of the vector
 
